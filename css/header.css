@@ -1,0 +1,77 @@
+/* Header */
+header {
+    background-color: #1E5631;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.transparent-header {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    padding-top: 15px;
+}
+
+.simple-menu {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-item {
+    margin-left: auto;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Hover verde para todos excepto Contáctanos */
+.menu-item:hover {
+    color: #43e248;
+}
+
+/* Hover azul solo para Contáctanos */
+.menu-item.contact-link:hover {
+    color: #3ac7e0 !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+    margin-top: 12vh;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
