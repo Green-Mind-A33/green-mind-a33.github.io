@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Contáctanos - Green Mind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="./css/main.css" media="all" rel="stylesheet"/>
+    <link href="./css/cuerpo_contactanos.css" media="all" rel="stylesheet"/>
+    <link href="./css/footer.css" media="all" rel="stylesheet"/>
+    <link href="./css/header.css" media="all" rel="stylesheet"/>
+    <link href="./css/portada_contactanos.css" media="all" rel="stylesheet"/>
+    <style>
+        :root {
+            --green-primary: #009640;
+            --green-dark: #005746;
+            --green-light: #43e248;
+            --blue-light: #52e5ff;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --black: #333333;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--black);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Hero Section */
+        .contact-hero {
+            position: relative;
+            height: 80vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            background: url('./media/amp_residuos_comprimidos.png');
+            background-size: cover;
+            background-position: center;
+            padding: 0 20px;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(20px, 2.5vw, 1.8rem);
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* Floating Cards */
+        .floating-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: -100px;
+            position: relative;
+            z-index: 3;
+            flex-wrap: wrap;
+        }
+        
+        .floating-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            width: 350px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        
+        .floating-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--green-primary);
+        }
+        
+        .card-title {
+            font-size: 1.8rem;
+            color: var(--green-dark);
+            margin-bottom: 15px;
+        }
+        
+        .card-text {
+            margin-bottom: 25px;
+            color: var(--black);
+            opacity: 0.8;
+            font-size: 16px;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: 150px 20px 80px;
+            background-color: var(--white);
+        }
+        
+        .benefits-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-title {
+            color: var(--green-dark);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--green-primary);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 5rem 0;
+        }
+        
+        .benefit-item {
+            padding: 30px;
+            border-radius: 10px;
+            background: var(--gray-light);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            background: var(--green-primary);
+            color: var(--white);
+        }
+        
+        .benefit-item:hover h3,
+        .benefit-item:hover .benefit-icon {
+            color: var(--white);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--green-primary);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-title {
+            font-size: 20px;
+            color: var(--green-dark);
+            margin-bottom: 15px;
+        }
+        
+        .benefit-text{
+            font-size: 16px;
+        }
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--green-primary), var(--green-primary));
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-text {
+            font-size: 20px;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1.1rem;
+            border: 2px solid transparent;
+            min-width: 250px;
+        }
+        
+        .btn-primary {
+            background-color: var(--green-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--green-dark);
+            border-color: var(--white);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--green-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 20px;
+            background-color: var(--gray-light);
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--green-primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--black);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .floating-cards {
+                margin-top: -50px;
+            }
+            
+            .floating-card {
+                width: 300px;
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero {
+                height: auto;
+                padding: 120px 20px;
+            }
+            
+            .floating-cards {
+                margin-top: 0;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .floating-card {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="transparent-header">
+        <nav aria-label="Principal" class="simple-menu">
+            <ul class="menu-list">
+                <li><a class="menu-item" href="index.html">Green Mind</a></li>
+                <li><a class="menu-item" href="nuestra_mision.html">Nuestra Misión</a></li>
+                <li class="contact-item"><a class="menu-item contact-link active" href="contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">¿Listo para revolucionar tu reciclaje?</h1>
+                <h3 class="hero-subtitle">Descubre cómo nuestros contenedores inteligentes pueden transformar tu gestión de residuos</h3>
+            </div>
+        </section>
+        
+        <!-- Floating Cards -->
+        <div class="floating-cards">
+            <div class="floating-card">
+                <div class="card-icon">🏛️</div>
+                <h3 class="card-title">Para Ayuntamientos</h3>
+                <p class="card-text">Soluciones inteligentes para mejorar el reciclaje en tu municipio y reducir costes operativos.</p>
+                <a href="ayuntamientos.html" class="btn btn-primary">Más información</a>
+            </div>
+            <div class="floating-card">
+                <div class="card-icon">🏢</div>
+                <h3 class="card-title">Para Empresas</h3>
+                <p class="card-text">Sistemas de reciclaje corporativo que mejoran tu RSC y reducen tu huella ecológica.</p>
+                <a href="empresas.html" class="btn btn-primary">Más información</a>
+            </div>
+        </div>
+        
+        <!-- Benefits Section -->
+        <section class="benefits-section" id="benefits">
+            <div class="benefits-container">
+                <h2 class="section-title">Beneficios de trabajar con Green Mind</h2>
+                <p style="font-size: 20px; max-width: 800px; margin: 0 auto 2rem;">
+                    Nuestra tecnología está transformando la gestión de residuos en toda España. Descubre lo que podemos hacer por ti.
+                </p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📈</div>
+                        <h3 class="benefit-title">Mayor eficiencia</h3>
+                        <p class="benefit-text">Reduce hasta un 40% los costes de gestión de residuos con nuestro sistema inteligente.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌍</div>
+                        <h3 class="benefit-title">Impacto ambiental</h3>
+                        <p class="benefit-text">Aumenta las tasas de reciclaje correcto hasta el 99% en tu comunidad u organización.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💡</div>
+                        <h3 class="benefit-title">Tecnología avanzada</h3>
+                        <p class="benefit-text">Sensores de IA que clasifican automáticamente cada residuo sin errores humanos.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📊</div>
+                        <h3 class="benefit-title">Datos en tiempo real</h3>
+                        <p class="benefit-text">Monitoriza tus niveles de reciclaje y optimiza las rutas de recogida.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏆</div>
+                        <h3 class="benefit-title">Reconocimiento</h3>
+                        <p class="benefit-text">Mejora tu imagen corporativa o municipal como líder en sostenibilidad.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔄</div>
+                        <h3 class="benefit-title">Economía circular</h3>
+                        <p class="benefit-text">Integración completa con el ciclo de reciclaje para maximizar la reutilización.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <h2 class="section-title">Nuestro impacto en números</h2>
+                <p style="font-size: 20px; max-width: 800px; margin: 0 auto 2rem;">
+                    Los resultados hablan por sí solos. Únete a la revolución del reciclaje inteligente.
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">+120</div>
+                        <div class="stat-text">Municipios transformados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-text">Precisión en clasificación</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+500</div>
+                        <div class="stat-text">Empresas satisfechas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-text">Ahorro en costes</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section" id="cta">
+            <div class="cta-container">
+                <h2 class="cta-title">¿Listo para dar el siguiente paso?</h2>
+                <p class="cta-text">
+                    Nuestros expertos están disponibles para analizar tus necesidades y ofrecerte la solución perfecta de reciclaje inteligente.
+                </p>
+                <div class="cta-buttons">
+                    <a href="mailto:contacto@greenmind.com" class="btn btn-outline">
+                        <span style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM19.6 8.25L12.53 12.67C12.21 12.87 11.79 12.87 11.47 12.67L4.4 8.25C4.15 8.09 4 7.82 4 7.53C4 6.86 4.73 6.46 5.3 6.81L12 11L18.7 6.81C19.27 6.46 20 6.86 20 7.53C20 7.82 19.85 8.09 19.6 8.25Z" fill="currentColor"/>
+                            </svg>
+                            Envíanos un email
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-theme-bg text-theme-text">
+        <div class="container">
+            <div class="footer__main md:flex md:flex-wrap mb-10 md:mb-6">
+                <div class="footer-col footer-col--text footer-col--not-collapsed">
+                    <div class="footer-block mb-8 text-start">
+                        <h2 class="footer-block__heading font-body font-bold text-h6 regular-text">Sumate al cambio!</h2>
+                        <div class="footer-block__text">
+                            <p>Juntos por un mundo más limpio. ¡Síguenos y haz la diferencia!</p>
+                        </div>
+                        <div class="footer-block__btns footer-block__social">
+                            <ul class="social inline-flex flex-wrap justify-start">
+                                <li>
+                                    <a class="social__link flex items-center justify-center" href="https://www.instagram.com/greenmind.innova/" rel="noopener" target="_blank" title="Green Mind on Instagram">
+                                        <svg aria-hidden="true" class="icon" fill="currentColor" focusable="false" height="24" role="presentation" viewbox="0 0 20 20" width="24">
+                                            <circle cx="15.238" cy="4.948" r="1.238"></circle>
+                                            <path d="M19.47 3.444A5.11 5.11 0 0 0 16.548.527a7.351 7.351 0 0 0-2.43-.466C13.05.014 12.713 0 9.999 0c-2.712 0-3.057 0-4.12.06A7.351 7.351 0 0 0 3.45.528 5.11 5.11 0 0 0 .528 3.444 7.317 7.317 0 0 0 .06 5.87C.014 6.936 0 7.274 0 9.982s0 3.053.06 4.113c.018.829.176 1.649.468 2.425a5.11 5.11 0 0 0 2.922 2.917 7.35 7.35 0 0 0 2.429.5c1.069.047 1.407.06 4.12.06s3.058 0 4.12-.06a7.351 7.351 0 0 0 2.429-.466 5.11 5.11 0 0 0 2.922-2.918 7.31 7.31 0 0 0 .467-2.424c.047-1.067.06-1.405.06-4.113s0-3.053-.06-4.113a7.317 7.317 0 0 0-.467-2.459zm-1.437 10.537a5.439 5.439 0 0 1-.34 1.843 3.262 3.262 0 0 1-1.87 1.87 5.451 5.451 0 0 1-1.825.34c-1.04.046-1.332.06-3.996.06-2.664 0-2.937 0-3.995-.06a5.451 5.451 0 0 1-1.825-.34 3.255 3.255 0 0 1-1.878-1.87 5.439 5.439 0 0 1-.34-1.823c-.046-1.038-.06-1.33-.06-3.992s0-2.934.06-3.992c.006-.63.121-1.253.34-1.844a3.255 3.255 0 0 1 1.878-1.87 5.451 5.451 0 0 1 1.825-.339c1.038-.046 1.331-.06 3.995-.06s2.937 0 3.996.06c.623.008 1.24.123 1.824.34.86.331 1.54 1.01 1.872 1.87.216.583.331 1.2.34 1.823.046 1.038.06 1.33.06 3.992 0 2.661 0 2.948-.047 3.992h-.014z"></path>
+                                            <path d="M9.991 14.753a4.761 4.761 0 1 1 0-9.523 4.761 4.761 0 0 1 0 9.523zm0-1.905a2.857 2.857 0 1 0 0-5.713 2.857 2.857 0 0 0 0 5.713z"></path>
+                                        </svg>
+                                        <span class="visually-hidden">Instagram</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social__link flex items-center justify-center" href="https://www.youtube.com/@GreenMind.innova" rel="noopener" target="_blank" title="Green Mind on YouTube">
+                                        <svg aria-hidden="true" class="icon" fill="currentColor" focusable="false" height="24" role="presentation" viewBox="0 0 24 24" width="24">
+                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                        </svg>
+                                        <span class="visually-hidden">YouTube</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social__link flex items-center justify-center" href="https://x.com/green_mind41948" rel="noopener" target="_blank" title="Green Mind on Twitter">
+                                        <svg aria-hidden="true" class="icon" fill="currentColor" focusable="false" height="40" role="presentation" viewbox="1 1 22 22" width="40">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                                        </svg>
+                                        <span class="visually-hidden">X</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social__link flex items-center justify-center" href="https://www.linkedin.com/in/greenmind-undefined-993a7435a/" rel="noopener" target="_blank" title="Green Mind on LinkedIn">
+                                        <svg aria-hidden="true" class="icon" fill="currentColor" focusable="false" height="24" role="presentation" viewbox="0 0 20 20" width="24">
+                                            <path d="M.504 6.413h3.899V20H.504V6.413zm1.85-1.7h-.028C.915 4.714 0 3.676 0 2.36 0 1.018.942 0 2.381 0c1.438 0 2.323 1.015 2.35 2.356 0 1.315-.912 2.358-2.377 2.358zM20 20h-4.42v-7.032c0-1.84-.692-3.095-2.212-3.095-1.163 0-1.81.847-2.11 1.665-.114.292-.096.7-.096 1.11V20h-4.38s.057-12.455 0-13.587h4.38v2.132c.259-.932 1.658-2.263 3.89-2.263 2.771 0 4.948 1.956 4.948 6.163V20z"></path>
+                                        </svg>
+                                        <span class="visually-hidden">LinkedIn</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-block mb-8 text-start">
+                    <h2 class="footer-block__heading font-body font-bold text-h6 regular-text"><a href="contactanos.html">Contacto</a></h2>
+                    <div class="footer-content" style="font-size: 19px;">
+                        <ul>
+                            <li>Camino de Vera, s/n. 46022 - València</li>
+                            <li><a href="mailto:greenmind.innova@gmail.com">greenmind.innova@gmail.com</a></li>
+                        </ul>    
+                    </div>
+                    <div class="footer-block__text" style="margin-top: 8px;">
+                        <ul>
+                            <li><img src="media/upv_logo_inverso.svg" alt="Logotipo UPV" width="237" height="75"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-content" style="font-size: 17px;">
+                <div class="footer-links">
+                    <a href="privacidad.html">Política de privacidad</a>
+                    <a href="terminos.html">Términos de servicio</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <p>© 2025 Green Mind. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
