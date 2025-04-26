@@ -1,1 +1,0 @@
-# green-mind-a33.github.io
